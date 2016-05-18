@@ -1,0 +1,68 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+        id="WT"
+        version="2.5">
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+  <error-page>
+    <error-code>404</error-code>
+    <location>/WEB-INF/pages/warnpage.jsp</location>
+  </error-page>
+
+  <error-page>
+    <error-code>403</error-code>
+    <location>/WEB-INF/pages/warnpage.jsp</location>
+  </error-page>
+
+  <error-page>
+    <error-code>500</error-code>
+    <location>/WEB-INF/pages/warnpage.jsp</location>
+  </error-page>
+
+  <error-page>
+    <exception-type>java.lang.Throwable</exception-type>
+    <location>/WEB-INF/pages/warnpage.jsp</location>
+  </error-page>
+
+  <context-param>
+    <param-name>log4j-config-location</param-name>
+    <param-value>WEB-INF/log4j.properties</param-value>
+  </context-param>
+
+  <session-config>
+    <session-timeout>10</session-timeout>
+  </session-config>
+
+  <servlet>
+    <servlet-name>Contr</servlet-name>
+    <servlet-class>main.hav.controller.Controller</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Contr</servlet-name>
+    <url-pattern>/action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Contr</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+
+  <filter>
+    <filter-name>FilterGuard</filter-name>
+    <filter-class>main.hav.filter.Guard</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>FilterGuard</filter-name>
+    <url-pattern>/action</url-pattern>
+  </filter-mapping>
+</web-app>

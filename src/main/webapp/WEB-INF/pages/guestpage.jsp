@@ -19,7 +19,7 @@
         </form>
 <hr>
   Your prevoius expressions are:<br>
-  <table border="1">
+  <table border="1" class="table table-striped">
     <tr>
       <th>ID</th>
       <th>Expression</th>

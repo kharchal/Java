@@ -13,8 +13,8 @@ import java.util.List;
 public class ExpressionDaoImpl implements ExpressionDao {
 
     private static final Logger LOGGER = Logger.getLogger(ExpressionDaoImpl.class);
-    private static final String GET_ALL = "SELECT * FROM expressions";
-    private static final String GET_BY_USER = "SELECT * FROM expressions WHERE user=?";
+    private static final String GET_ALL = "SELECT * FROM expressions ORDER BY timestamp DESC";
+    private static final String GET_BY_USER = "SELECT * FROM expressions WHERE user=? ORDER BY timestamp DESC";
     private static final String ADD = "INSERT INTO expressions (expression, result, user) VALUES (?, ?, ?)";
     private static final String COUNT = "SELECT COUNT(DISTINCT expression) FROM expressions";
 

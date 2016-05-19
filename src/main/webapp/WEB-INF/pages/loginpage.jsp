@@ -12,30 +12,21 @@
 
   Please authorise yourself:<br>
   <p style="color:Red">${msg}</p>
-  <form action="login" method="post">
-    <table border="0">
-      <tr>
-        <td>
-          <label>Login:</label>
-        </td>
-        <td>
-          <input type="text" name="login" required>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label>Password:</label>
-        </td>
-        <td>
-          <input type="password" name="password" required>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2">
-          <input type="submit" value="Login" name="command" class="btn btn-success">
-        </td>
-      </tr>
-    </table>
+  <form action="login" method="post" class="form-inline" role="form">
+    <div class="form-group"></div>
+    <div class="form-group">
+      <label for="email">Login:</label>
+      <input type="text" name="login" required class="form-control" id="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" name="password" required class="form-control" id="pwd">
+    </div>
+
+
+    <input type="submit" value="Login" name="command" class="btn btn-success">
+
+
   </form>
 
 

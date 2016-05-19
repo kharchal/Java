@@ -19,24 +19,32 @@
 
   Enter your personal data:<br>
   <p style="color:Red">${msg}</p>
-  <form action="login" method="post" role="form">
+  <form action="login" method="post" role="form" class="form-horizontal">
     <div class="form-group">
-      <label for="login">Login:</label>
+      <label class="control-label col-sm-2" for="login">Login:</label>
+      <div class="col-sm-8">
       <input id="login" class="form-control" type="text" name="login" pattern="^[a-zA-Z]{1}[a-z0-9_-]{3,16}$"
              required value="${login}" title="4 to 16 chars(letters, digits, '-', '_'), starts with a letter">
+        </div>
     </div>
     <div class="form-group">
-      <label for="password">Password:</label>
+      <label class="control-label col-sm-2" for="password">Password:</label>
+      <div class="col-sm-8">
       <input id="password" class="form-control" type="password" name="password" pattern="^[a-z0-9_-]{4,16}$"
              required value="${password}" title="4 to 16 chars(letters, digits, '-', '_')">
+        </div>
     </div>
     <div class="form-group">
-      <label for="name">Name:</label>
+      <label class="control-label col-sm-2" for="name">Name:</label>
+      <div class="col-sm-8">
       <input id="name" class="form-control" type="text" name="name" required value="${name}">
+        </div>
     </div>
     <div class="form-group">
-      <label for="surname">Password:</label>
+      <label class="control-label col-sm-2" for="surname">Password:</label>
+      <div class="col-sm-8">
       <input id="surname" class="form-control" type="text" name="surname" required value="${surname}">
+        </div>
     </div>
 
 

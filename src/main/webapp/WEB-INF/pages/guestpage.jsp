@@ -8,7 +8,12 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
   <body>
-  Welcome ${loggeduser.name}!
+
+  <div class="row">
+    <div class="col-sm-1"> </div>
+    <div class="col-sm-10">
+
+    Welcome <strong>${loggeduser.name}!</strong><br>
   You can enter your expression here:
   <p style="color:Red">${msg}</p>
 
@@ -35,6 +40,11 @@
     </tr>
   </c:forEach>
     </table>
+
+  </div>
+  <div class="col-sm-1"> </div>
+  </div>
+
   <%@ taglib uri="/WEB-INF/tlds/mytag" prefix="mt" %>
   <mt:copyright name="HAV" year="2016"/>
   </body>

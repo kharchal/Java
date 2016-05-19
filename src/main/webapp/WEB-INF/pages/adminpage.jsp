@@ -10,6 +10,12 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
   <body>
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-1"> </div>
+    <div class="col-sm-10">
+
   <form action="action" method="post">
     <input type="submit" name="command" value="Logout" class="btn btn-info">
   </form>
@@ -77,6 +83,10 @@
       </tr>
     </c:forEach>
   </table>
+
+    </div>
+    <div class="col-sm-1"> </div>
+  </div>
 
   <mt:copyright name="HAV" year="2016"/>
   </body>

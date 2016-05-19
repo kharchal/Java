@@ -7,7 +7,10 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
   <body>
-
+  <hr>
+  <div class="row">
+    <div class="col-sm-1"> </div>
+    <div class="col-sm-10">
   Make your choice:
     <form method="post" action="login">
       <input type="submit" value="Register" class="btn btn-primary btn-md">
@@ -17,6 +20,10 @@
     <input type="submit" value="Login" class="btn btn-success btn-md">
     <input type="hidden" name="command" value="ShowLoginPage">
   </form>
+
+    </div>
+    <div class="col-sm-1"> </div>
+  </div>
 
   <mt:copyright name="HAV" year="2016"/>
   </body>

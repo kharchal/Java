@@ -11,7 +11,7 @@ import java.util.Map;
 public class CommandFactory {
     private static Map<String, ICommand> commands = new HashMap<String, ICommand>();
     private static final Logger LOGGER = Logger.getLogger(CommandFactory.class);
-    private static ICommand noCommand;
+    private static ICommand noCommand = new NoCommand();;
 
     static {
         commands.put("Login", new Login());
@@ -31,13 +31,14 @@ public class CommandFactory {
         LOGGER.debug(" value is: " + value);
         ICommand command = commands.get(value);
         LOGGER.info("COMMAND is: " + command);
+
+
         if (command == null) {
-            if (noCommand == null) {
-                noCommand = new NoCommand();
-            }
             command = noCommand;
         }
+
         LOGGER.info("COMMAND to excecute: " + command);
         return command;
     }
+
 }
